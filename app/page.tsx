@@ -5,9 +5,9 @@ import { formatList, sum } from "@/utils/format";
 
 
 const products: Product[] = [
-  { id: "p1", name: "Headphone", price: 350000, category: "electronics", inStock: true },
-  { id: "p2", name: "Kaos Polos", price: 85000, category: "fashion", inStock: true },
-  { id: "p3", name: "Keripik Pisang", price: 25000, category: "food", inStock: false },
+  { id: "p1", name: "Headphone", slug: "headphone", price: 350000, category: "electronics", inStock: true },
+  { id: "p2", name: "Kaos Polos", slug: "kaos-polos", price: 85000, category: "fashion", inStock: true },
+  { id: "p3", name: "Keripik Pisang", slug: "keripik-pisang", price: 25000, category: "food", inStock: false },
 ];
 
 
