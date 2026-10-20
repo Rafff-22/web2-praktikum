@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function About() {
+  const [showMotivation, setShowMotivation] = useState(true);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
       <section className="w-full max-w-xl rounded-2xl bg-white p-8 shadow-lg">
@@ -13,15 +18,24 @@ export default function About() {
           </div>
           <div>
             <dt className="text-sm font-semibold uppercase text-gray-500">NIM</dt>
-            <dd className="text-lg text-gray-900">52024022</dd>
+            <dd className="text-lg text-gray-900">52024002</dd>
           </div>
           <div>
             <dt className="text-sm font-semibold uppercase text-gray-500">
               Motivasi Mengikuti Mata Kuliah Ini
             </dt>
-            <dd className="text-gray-700">
-              Saya ingin menguasai pengembangan web modern dengan Next.js dan TypeScript agar siap membangun aplikasi web yang sesungguhnya.
-            </dd>
+            {showMotivation && (
+              <dd className="text-gray-700">
+                Saya ingin menguasai pengembangan web modern dengan Next.js dan
+                TypeScript agar siap membangun aplikasi web yang sesungguhnya.
+              </dd>
+            )}
+            <button
+              onClick={() => setShowMotivation(!showMotivation)}
+              className="mt-2 text-sm text-blue-700 underline hover:text-blue-900"
+            >
+              {showMotivation ? "Sembunyikan" : "Tampilkan"} Motivasi
+            </button>
           </div>
         </dl>
 
