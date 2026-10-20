@@ -1,10 +1,9 @@
-"use client";
-
-import { useState } from "react";
+import { getProfile } from "@/lib/profile";
 import Link from "next/link";
+import MotivationToggle from "@/components/MotivationToggle";
 
-export default function About() {
-  const [showMotivation, setShowMotivation] = useState(true);
+export default async function About() {
+  const profile = await getProfile();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
@@ -14,28 +13,17 @@ export default function About() {
         <dl className="mt-6 space-y-4">
           <div>
             <dt className="text-sm font-semibold uppercase text-gray-500">Nama</dt>
-            <dd className="text-lg text-gray-900">Andi Muh Rafi Khairan Rusdi</dd>
+            <dd className="text-lg text-gray-900">{profile.nama}</dd>
           </div>
           <div>
             <dt className="text-sm font-semibold uppercase text-gray-500">NIM</dt>
-            <dd className="text-lg text-gray-900">52024002</dd>
+            <dd className="text-lg text-gray-900">{profile.nim}</dd>
           </div>
           <div>
             <dt className="text-sm font-semibold uppercase text-gray-500">
               Motivasi Mengikuti Mata Kuliah Ini
             </dt>
-            {showMotivation && (
-              <dd className="text-gray-700">
-                Saya ingin menguasai pengembangan web modern dengan Next.js dan
-                TypeScript agar siap membangun aplikasi web yang sesungguhnya.
-              </dd>
-            )}
-            <button
-              onClick={() => setShowMotivation(!showMotivation)}
-              className="mt-2 text-sm text-blue-700 underline hover:text-blue-900"
-            >
-              {showMotivation ? "Sembunyikan" : "Tampilkan"} Motivasi
-            </button>
+            <MotivationToggle text={profile.motivasi} />
           </div>
         </dl>
 
