@@ -1,11 +1,14 @@
-import SiteHeader from "@/components/SiteHeader";
+﻿import Link from "next/link";
 import ProductCatalog from "@/components/ProductCatalog";
+import { getProducts } from "@/lib/product-store";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const products = await getProducts();
+
   return (
-    <main className="min-h-screen bg-slate-50">
-      <SiteHeader />
-
+    <main className="bg-slate-50">
       <section className="bg-linear-to-r from-blue-700 to-indigo-700 text-white">
         <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-100">
@@ -17,21 +20,20 @@ export default function Home() {
           </h1>
 
           <p className="mt-5 max-w-2xl leading-7 text-blue-50">
-            Jelajahi berbagai produk pilihan dari pelaku usaha lokal melalui
-            katalog digital yang praktis dan mudah digunakan.
+            Temukan produk makanan, minuman, dan produk lokal dari pelaku UMKM.
           </p>
 
-          <a
-            href="#katalog"
+          <Link
+            href="/produk"
             className="mt-7 inline-block rounded-lg bg-white px-5 py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-50"
           >
-            Jelajahi Katalog
-          </a>
+            Jelajahi produk
+          </Link>
         </div>
       </section>
 
       <div className="mx-auto max-w-6xl px-6">
-        <ProductCatalog />
+        <ProductCatalog products={products} />
       </div>
 
       <footer className="mt-10 border-t border-slate-200 bg-white">

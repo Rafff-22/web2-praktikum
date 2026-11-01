@@ -1,3 +1,4 @@
+﻿import Link from "next/link";
 import type { Product } from "@/types/product";
 
 type ProductCardProps = {
@@ -25,9 +26,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.category}
         </span>
 
-        <h3 className="text-lg font-semibold leading-snug text-slate-900">
+        <h2 className="text-lg font-semibold leading-snug text-slate-900">
           {product.name}
-        </h3>
+        </h2>
 
         <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">
           {product.description}
@@ -41,6 +42,13 @@ export default function ProductCard({ product }: ProductCardProps) {
             {formattedPrice}
           </span>
         </div>
+
+        <Link
+          href={`/produk/${product.id}`}
+          className="mt-4 inline-block text-sm font-semibold text-blue-700 underline"
+        >
+          Lihat detail
+        </Link>
       </div>
     </article>
   );

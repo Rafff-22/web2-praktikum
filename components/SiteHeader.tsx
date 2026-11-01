@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function SiteHeader() {
   return (
@@ -8,13 +8,19 @@ export default function SiteHeader() {
           UMKM Digital Store
         </Link>
 
-        <nav aria-label="Navigasi utama">
-          <a
-            href="#katalog"
+        <nav aria-label="Navigasi utama" className="flex gap-5">
+          <Link
+            href="/"
             className="text-sm font-medium text-slate-600 hover:text-blue-700"
           >
-            Katalog Produk
-          </a>
+            Beranda
+          </Link>
+          <Link
+            href="/produk"
+            className="text-sm font-medium text-slate-600 hover:text-blue-700"
+          >
+            Produk
+          </Link>
         </nav>
       </div>
     </header>
