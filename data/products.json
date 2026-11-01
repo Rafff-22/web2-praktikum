@@ -1,0 +1,11 @@
+[
+  { "id": "1", "name": "Kopi Toraja", "description": "Kopi lokal kemasan 250 gram dengan aroma khas.", "price": 85000, "category": "Minuman" },
+  { "id": "2", "name": "Keripik Pisang", "description": "Keripik pisang renyah produksi UMKM lokal.", "price": 25000, "category": "Makanan" },
+  { "id": "3", "name": "Sambal UMKM", "description": "Sambal rumahan dengan cita rasa khas.", "price": 30000, "category": "Makanan" },
+  { "id": "4", "name": "Tas Anyaman", "description": "Tas buatan tangan dengan desain sederhana.", "price": 95000, "category": "Kerajinan" },
+  { "id": "5", "name": "Dompet Kulit", "description": "Dompet praktis untuk penggunaan sehari-hari.", "price": 65000, "category": "Aksesori" },
+  { "id": "6", "name": "Teh Herbal Rempah", "description": "Teh seduh dari rempah pilihan, hangat dan menyegarkan.", "price": 28000, "category": "Minuman" },
+  { "id": "7", "name": "Gelang Handmade", "description": "Gelang sederhana hasil karya pengrajin lokal.", "price": 25000, "category": "Aksesori" },
+  { "id": "8", "name": "Keranjang Rotan", "description": "Keranjang rotan serbaguna untuk penyimpanan di rumah.", "price": 120000, "category": "Kerajinan" },
+  { "id": "9", "name": "Hiasan Dinding Anyaman", "description": "Hiasan dinding anyaman tangan bermotif tradisional.", "price": 55000, "category": "Kerajinan" }
+]
