@@ -2,6 +2,8 @@
 import ProductCatalog from "@/components/ProductCatalog";
 import { getProducts } from "@/lib/product-store";
 
+export const runtime = "nodejs";
+
 export const dynamic = "force-dynamic";
 
 export default async function Home() {

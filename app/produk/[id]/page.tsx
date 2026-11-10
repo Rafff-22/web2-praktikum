@@ -2,6 +2,8 @@
 import { notFound } from "next/navigation";
 import { getProductById } from "@/lib/product-store";
 
+export const runtime = "nodejs";
+
 export const dynamic = "force-dynamic";
 
 export default async function DetailProdukPage({
