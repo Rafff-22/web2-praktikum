@@ -1,0 +1,17 @@
+# Referensi konseptual. Tidak ada server GraphQL di proyek ini.
+type Product {
+  id: ID!
+  name: String!
+  description: String!
+  price: Float!
+  category: String!
+}
+
+type Query {
+  products: [Product!]!
+  product(id: ID!): Product
+}
+
+type Mutation {
+  addProduct(name: String!, description: String!, price: Float!, category: String!): Product!
+}
