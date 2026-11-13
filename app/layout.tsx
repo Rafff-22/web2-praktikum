@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
+import TrpcProvider from "@/components/TrpcProvider";
 
 export const metadata: Metadata = {
   title: "UMKM Digital Store",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body>
-        <SiteHeader />
-        {children}
+        <TrpcProvider>
+          <SiteHeader />
+          {children}
+        </TrpcProvider>
       </body>
     </html>
   );
